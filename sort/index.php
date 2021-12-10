@@ -10,9 +10,10 @@ class ConNguoi
     function manh()
     {
         echo $a =10;
+        echo "<br />";
         var_dump($this);
     }
     
 }
 $hung = new ConNguoi('manh', 20);
-var_dump($hung->manh());
+$hung->manh();

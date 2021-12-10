@@ -1,10 +1,10 @@
 <?php
 
-function maxSum($a = [[]]) {
-        $max = getSum($a[[]], 1, 1);
+function maxSum($a = []) {
+        $max = getSum($a[], 1, 1);
         for($i =1; $i<5;$i++) {
                 for($j=1; $j<5; $j++) {
-                        $sum = getSum($a[[]], $i, $j);
+                        $sum = getSum($a[], $i, $j);
                         if($sum > $max) {
                                 $max = $sum;
                         }
@@ -13,10 +13,10 @@ function maxSum($a = [[]]) {
         return $sum;
 }
 
-function getSum($a = [[]], $i, $j) {
-        return ([$i-1 ,[$j-1]] + [$i-1, [$j]] + [$i-1, [$j+1]] +
-                        [$i, [$j]] +
-                        [$i+1,[$j-1]] + [$i+1,[$j]] + [$i+1,[$j+1]] ) ;
+function getSum($a = [], $i, $j) {
+        return ([$i-1][$j-1] + [$i-1][$j]+ [$i-1][$j+1] +
+                        [$i][$j] +
+                        [$i+1][$j-1] + [$i+1][$j] + [$i+1][$j+1] ) ;
 }
 $a = [
         [9,-9,-9,1,1,1],
